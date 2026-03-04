@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontak Kami - Toko Buku Tasya & Zalfa</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=One+One&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+    .kontak-section {
+  padding: 70px 20px;
+  background: linear-gradient(to bottom, #f8cdda, #f06292);
+  text-align: center;
+}
+
+.kontak-section h1 {
+  font-size: 40px;
+  color: #c2185b;
+  margin-bottom: 50px;
+}
+
+.kontak-container {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.info-kontak {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: left;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.info-kontak h2 {
+  color: #e91e63;
+  margin-bottom: 20px;
+}
+
+.info-kontak p {
+  margin: 6px 0;
+  font-size: 15px;
+}
+
+.form-box {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.form-box h2 {
+  color: #e91e63;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+input, textarea {
+  margin-top: 5px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #e91e63;
+}
+
+button {
+  margin-top: 25px;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  background: #e91e63;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #c2185b;
+}
+
+header {
+  background: linear-gradient(to right, #ec407a, #e91e63);
+  padding: 20px 0;
+  text-align: center;
+}
+
+.logo {
+  color: white;
+  margin-bottom: 15px;
+}
+
+.navbar {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.navbar li a:hover {
+  color: #ffd1dc;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Beranda</a>
+    <a href="produk.html">Produk</a>
+    <a href="bedah buku.html">Bedah Buku</a>
+    <a href="event.html">Event</a>
+    <a href="kontak.html" class="active">Kontak</a>
+    <a href="testimoni.html">Testimoni</a>
+</nav>
+
+<section class="kontak-section">
+  <h1>Kontak Kami</h1>
+
+  <div class="kontak-container">
+
+    <!-- Info Alamat -->
+    <div class="info-kontak">
+      <h2>Alamat Toko</h2>
+      <p>📍 Jl. Merdeka No. 10</p>
+      <p>Kecamatan Genteng</p>
+      <p>Surabaya, Jawa Timur 60275</p>
+      <p>Indonesia</p>
+      <br>
+      <p>📞 +62 812-3456-7890</p>
+      <p>✉️ info@tokobukutasyazalfa.com</p>
+      <p>🕒 Senin - Sabtu (09.00 - 21.00 WIB)</p>
+    </div>
+
+    <!-- Form -->
+    <div class="form-box">
+      <h2>Form Kontak</h2>
+
+      <form>
+        <label>Nama</label>
+        <input type="text" placeholder="Masukkan nama Anda">
+
+        <label>Email</label>
+        <input type="email" placeholder="Masukkan email Anda">
+
+        <label>Pesan</label>
+        <textarea rows="4" placeholder="Tulis pesan Anda..."></textarea>
+
+        <button type="submit">Kirim Pesan</button>
+      </form>
+    </div>
+
+  </div>
+</section>

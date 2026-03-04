@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulir Testimoni - Toko Buku Tasya-Zalfa</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Toko Buku Tasya-Zalfa</h1>
+    <nav>
+    <a href="index.html">Beranda</a>
+    <a href="produk.html">Produk</a>
+    <a href="bedah buku.html">Bedah Buku</a>
+    <a href="event.html">Event</a>
+    <a href="kontak.html">Kontak</a>
+    <a href="testimoni.html">Testimoni</a>
+</nav>
+</header>
+
+<main class="formulir">
+    <h2>Daftar Testimoni Pembeli</h2>
+
+    <div id="daftarTestimoni"></div>
+
+    <button id="hapusSemua">Hapus Semua Testimoni</button>
+</main>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    const container = document.getElementById("daftarTestimoni");
+    const tombolHapus = document.getElementById("hapusSemua");
+
+    let testimoniList = JSON.parse(localStorage.getItem("testimoniList")) || [];
+
+    if (testimoniList.length === 0) {
+        container.innerHTML = "<p>Belum ada testimoni.</p>";
+    } else {
+        testimoniList.forEach(function(t) {
+            const div = document.createElement("div");
+            div.innerHTML =
+                "<p><strong>Nama:</strong> " + t.nama + "</p>" +
+                "<p><strong>Email:</strong> " + t.email + "</p>" +
+                "<p><strong>Pesan:</strong> " + t.pesan + "</p>" +
+                "<hr>";
+
+            container.appendChild(div);
+        });
+    }
+
+    tombolHapus.addEventListener("click", function() {
+        const konfirmasi = confirm("Yakin ingin menghapus semua testimoni?");
+        if (konfirmasi) {
+            localStorage.removeItem("testimoniList");
+            location.reload();
+        }
+    });
+
+});
+</script>
+
+</body>
+</html>
